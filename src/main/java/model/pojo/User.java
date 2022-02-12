@@ -10,6 +10,7 @@ public class User {
     private String firstName;
     private String lastName;
     private String username;
+    private int isNew;
 
     public User(){
 
@@ -22,14 +23,16 @@ public class User {
         this.lastName = u.lastName;
         this.password = u.password;
         this.usertype = u.usertype;
+        this.isNew = u.isNew;
     }
 
-    public User(String username, String password, String firstName, String lastName, String usertype){
+    public User(String username, String password, String firstName, String lastName, String usertype, int isNew){
         this.username = username;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
         this.usertype = usertype;
+        this.isNew = isNew;
     }
 
 
@@ -80,6 +83,14 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public int getIsNew() {
+        return isNew;
+    }
+
+    public void setIsNew(int isNew) {
+        this.isNew = isNew;
     }
 
 

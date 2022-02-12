@@ -72,32 +72,28 @@
 
 
 <main class="form-signin">
-    <form action="login" method="POST">
-        <img class="mb-4 mt-2" src="img/logo.png" alt="" width="100" height="">
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <form action="gettingstarted" method="post">
+        <img class="mb-4" src="https://play-lh.googleusercontent.com/6bp77Aco1o6H5amfafw6kSQrnyXmZ63MrQtjCIKXukIzzSXctpPVpiweOBzPZRhDizE=s360-rw" alt="" width="100" height="">
+        <h1 class="h3 mb-3 fw-normal">Lets get you started!</h1>
+        <h1 class="h4 mb-3 fw-normal">Please fill in your vehicle details.</h1>
 
         <c:choose>
-            <c:when test="${not empty errMessageLogin}">
-                <div class='alert alert-danger'><c:out value="${errMessageLogin}"/></div>
+            <c:when test="${not empty errMessage}">
+                <div class='alert alert-danger'><c:out value="${errMessage}"/></div>
             </c:when>
         </c:choose>
 
+
         <div class="form-floating">
-            <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Username">
-            <label for="floatingInput">Email address</label>
+            <input type="text" name="vehicle_registration" class="form-control" id="floatingInput" placeholder="Vehicle Registration">
+            <label for="floatingInput">Vehicle Registration</label>
         </div>
-        <div class="form-floating">
-            <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
+        <div class="mt-2 form-floating">
+            <input type="text" name="vehicle_type" class="form-control" id="floatingPassword" placeholder="Brand">
+            <label for="floatingPassword">Vehicle Brand</label>
         </div>
 
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-        <div class="checkbox mt-3">
-            <label>
-                Don't have an account? Create
-            </label>
-        </div>
-        <p class="mt-5 mb-3 text-muted">&copy;2022</p>
+        <button class="mt-2 w-100 btn btn-lg btn-primary" type="submit">Continue</button>
     </form>
 </main>
 

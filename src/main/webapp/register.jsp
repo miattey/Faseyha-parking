@@ -1,5 +1,4 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -72,29 +71,23 @@
 
 
 <main class="form-signin">
-    <form action="login" method="POST">
-        <img class="mb-4 mt-2" src="img/logo.png" alt="" width="100" height="">
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
-        <c:choose>
-            <c:when test="${not empty errMessageLogin}">
-                <div class='alert alert-danger'><c:out value="${errMessageLogin}"/></div>
-            </c:when>
-        </c:choose>
+    <form>
+        <img class="mb-4" src="https://play-lh.googleusercontent.com/6bp77Aco1o6H5amfafw6kSQrnyXmZ63MrQtjCIKXukIzzSXctpPVpiweOBzPZRhDizE=s360-rw" alt="" width="100" height="">
+        <h1 class="h3 mb-3 fw-normal">Please register</h1>
 
         <div class="form-floating">
-            <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Username">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">Email address</label>
         </div>
         <div class="form-floating">
-            <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
             <label for="floatingPassword">Password</label>
         </div>
 
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
         <div class="checkbox mt-3">
             <label>
-                Don't have an account? Create
+                Already have an account? Login
             </label>
         </div>
         <p class="mt-5 mb-3 text-muted">&copy;2022</p>
